@@ -14,8 +14,12 @@
     rgba(245, 216, 255, 1) 100%
   );
 }
-/* classes attached to <body> */
 
+#calendar{
+  height: 88vh;
+  width: 100vw;
+}
+/* classes attached to <body> */
 .fc-not-allowed,
 .fc-not-allowed .fc-event {
   /* override events' custom cursors */
