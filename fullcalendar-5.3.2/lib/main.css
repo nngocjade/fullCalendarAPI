@@ -1,12 +1,12 @@
 :root {
   --lighter-accent-color: #f5d8ff83;
-  --accent-color: #f5d8ff;
-  --darker-accent-color: #efc3fd;
+  --accent-color: #eeb9ff;
+  --darker-accent-color: #e39ff8;
   --border-color: rgba(168, 64, 182, 0.5);
   --linear-gradient-light-to-dark: linear-gradient(
     0deg,
-    rgba(245, 216, 255, 1) 30%,
-    rgba(255, 255, 255, 1) 85%
+    rgba(245, 216, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
   );
   --linear-gradient-dark-to-light: linear-gradient(
     0deg,
@@ -34,7 +34,6 @@
   /* layout of immediate children */
   display: flex;
   flex-direction: column;
-
   font-size: 1em;
 }
 .fc,
@@ -324,6 +323,19 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* when the toolbar-chunk positioning system is explicitly left-to-right */
   flex-direction: row-reverse;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
 .fc .fc-scroller {
   -webkit-overflow-scrolling: touch;
   position: relative; /* for abs-positioned elements within */
@@ -479,8 +491,8 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   font-style: italic;
 }
 .fc .fc-highlight {
-  background: rgba(188, 232, 241, 0.3);
-  background: var(--fc-highlight-color, rgba(188, 232, 241, 0.3));
+  background: var(--lighter-accent-color);
+  background: var(--fc-highlight-color, var(--lighter-accent-color));
 }
 .fc .fc-cell-shaded,
 .fc .fc-day-disabled {
